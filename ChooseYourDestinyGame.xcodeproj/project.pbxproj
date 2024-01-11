@@ -8,17 +8,78 @@
 
 /* Begin PBXBuildFile section */
 		BC340EF42B4E9FCF00FBA119 /* ChooseYourDestinyGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC340EF32B4E9FCF00FBA119 /* ChooseYourDestinyGameApp.swift */; };
-		BC340EF62B4E9FCF00FBA119 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC340EF52B4E9FCF00FBA119 /* ContentView.swift */; };
 		BC340EF82B4E9FD000FBA119 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC340EF72B4E9FD000FBA119 /* Assets.xcassets */; };
 		BC340EFB2B4E9FD000FBA119 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC340EFA2B4E9FD000FBA119 /* Preview Assets.xcassets */; };
+		BC340F062B4EA16E00FBA119 /* StoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC340F052B4EA16E00FBA119 /* StoriesView.swift */; };
+		BC340F0B2B4EA1ED00FBA119 /* ResourceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC340F0A2B4EA1ED00FBA119 /* ResourceModel.swift */; };
+		BC340F0D2B4EA23C00FBA119 /* ChoiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC340F0C2B4EA23C00FBA119 /* ChoiceModel.swift */; };
+		BC340F0F2B4EA47300FBA119 /* ScenarioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC340F0E2B4EA47300FBA119 /* ScenarioModel.swift */; };
+		BC340F112B4EA4C700FBA119 /* StoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC340F102B4EA4C700FBA119 /* StoryModel.swift */; };
+		BC340F162B4EA71500FBA119 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = BC340F152B4EA71500FBA119 /* Auth */; };
+		BC340F182B4EA71500FBA119 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = BC340F172B4EA71500FBA119 /* Functions */; };
+		BC340F1A2B4EA71500FBA119 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = BC340F192B4EA71500FBA119 /* PostgREST */; };
+		BC340F1C2B4EA71500FBA119 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = BC340F1B2B4EA71500FBA119 /* Realtime */; };
+		BC340F1E2B4EA71500FBA119 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = BC340F1D2B4EA71500FBA119 /* Storage */; };
+		BC340F202B4EA72700FBA119 /* SupabaseSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC340F1F2B4EA72700FBA119 /* SupabaseSession.swift */; };
+		BC340F222B4EA76300FBA119 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = BC340F212B4EA76300FBA119 /* Auth */; };
+		BC340F242B4EA76300FBA119 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = BC340F232B4EA76300FBA119 /* Functions */; };
+		BC340F262B4EA76300FBA119 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = BC340F252B4EA76300FBA119 /* PostgREST */; };
+		BC340F282B4EA76300FBA119 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = BC340F272B4EA76300FBA119 /* Realtime */; };
+		BC340F2A2B4EA76300FBA119 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = BC340F292B4EA76300FBA119 /* Storage */; };
+		BC340F2C2B4EA78200FBA119 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = BC340F2B2B4EA78200FBA119 /* Auth */; };
+		BC340F2E2B4EA78200FBA119 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = BC340F2D2B4EA78200FBA119 /* Functions */; };
+		BC340F302B4EA78200FBA119 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = BC340F2F2B4EA78200FBA119 /* PostgREST */; };
+		BC340F322B4EA78200FBA119 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = BC340F312B4EA78200FBA119 /* Realtime */; };
+		BC340F342B4EA78200FBA119 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = BC340F332B4EA78200FBA119 /* Storage */; };
+		BCCF85512B4EA80F00F99CD7 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = BCCF85502B4EA80F00F99CD7 /* Auth */; };
+		BCCF85532B4EA80F00F99CD7 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = BCCF85522B4EA80F00F99CD7 /* Functions */; };
+		BCCF85552B4EA80F00F99CD7 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = BCCF85542B4EA80F00F99CD7 /* PostgREST */; };
+		BCCF85572B4EA80F00F99CD7 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = BCCF85562B4EA80F00F99CD7 /* Realtime */; };
+		BCCF85592B4EA80F00F99CD7 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = BCCF85582B4EA80F00F99CD7 /* Storage */; };
+		BCCF855B2B4EA80F00F99CD7 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = BCCF855A2B4EA80F00F99CD7 /* Supabase */; };
+		BCCF855D2B4EA85F00F99CD7 /* StoryRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF855C2B4EA85F00F99CD7 /* StoryRemoteDataSource.swift */; };
+		BCCF855F2B4EAAAE00F99CD7 /* StoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF855E2B4EAAAE00F99CD7 /* StoryManager.swift */; };
+		BCCF85612B4EBC7700F99CD7 /* StoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF85602B4EBC7700F99CD7 /* StoryDetailView.swift */; };
+		BCCF85642B4EC11400F99CD7 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF85632B4EC11400F99CD7 /* NavigationManager.swift */; };
+		BCCF85662B4EC13E00F99CD7 /* NavigationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF85652B4EC13E00F99CD7 /* NavigationState.swift */; };
+		BCCF85692B4EC37B00F99CD7 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF85682B4EC37B00F99CD7 /* RootView.swift */; };
+		BCCF856B2B4EE8FF00F99CD7 /* StoryListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF856A2B4EE8FF00F99CD7 /* StoryListRow.swift */; };
+		BCCF856F2B4EF68200F99CD7 /* ScenarioCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF856E2B4EF68200F99CD7 /* ScenarioCard.swift */; };
+		BCCF85712B4EFB6C00F99CD7 /* ResourceBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF85702B4EFB6C00F99CD7 /* ResourceBar.swift */; };
+		BCCF85732B4EFC5600F99CD7 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF85722B4EFC5600F99CD7 /* GameManager.swift */; };
+		BCCF85752B4F059300F99CD7 /* StoryHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF85742B4F059300F99CD7 /* StoryHistoryModel.swift */; };
+		BCCF85772B4F06D300F99CD7 /* LocalStoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF85762B4F06D300F99CD7 /* LocalStoriesView.swift */; };
+		BCCF85792B4F099500F99CD7 /* LocalStoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF85782B4F099500F99CD7 /* LocalStoryDetailView.swift */; };
+		BCCF857B2B4F1D3600F99CD7 /* LocalStoryListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF857A2B4F1D3600F99CD7 /* LocalStoryListRow.swift */; };
+		BCCF857D2B4F42C200F99CD7 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF857C2B4F42C200F99CD7 /* GameState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BC340EF02B4E9FCF00FBA119 /* ChooseYourDestinyGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChooseYourDestinyGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC340EF32B4E9FCF00FBA119 /* ChooseYourDestinyGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseYourDestinyGameApp.swift; sourceTree = "<group>"; };
-		BC340EF52B4E9FCF00FBA119 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BC340EF72B4E9FD000FBA119 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC340EFA2B4E9FD000FBA119 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BC340F052B4EA16E00FBA119 /* StoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesView.swift; sourceTree = "<group>"; };
+		BC340F0A2B4EA1ED00FBA119 /* ResourceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceModel.swift; sourceTree = "<group>"; };
+		BC340F0C2B4EA23C00FBA119 /* ChoiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceModel.swift; sourceTree = "<group>"; };
+		BC340F0E2B4EA47300FBA119 /* ScenarioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioModel.swift; sourceTree = "<group>"; };
+		BC340F102B4EA4C700FBA119 /* StoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryModel.swift; sourceTree = "<group>"; };
+		BC340F1F2B4EA72700FBA119 /* SupabaseSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseSession.swift; sourceTree = "<group>"; };
+		BCCF855C2B4EA85F00F99CD7 /* StoryRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryRemoteDataSource.swift; sourceTree = "<group>"; };
+		BCCF855E2B4EAAAE00F99CD7 /* StoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryManager.swift; sourceTree = "<group>"; };
+		BCCF85602B4EBC7700F99CD7 /* StoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailView.swift; sourceTree = "<group>"; };
+		BCCF85632B4EC11400F99CD7 /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
+		BCCF85652B4EC13E00F99CD7 /* NavigationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationState.swift; sourceTree = "<group>"; };
+		BCCF85682B4EC37B00F99CD7 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		BCCF856A2B4EE8FF00F99CD7 /* StoryListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryListRow.swift; sourceTree = "<group>"; };
+		BCCF856E2B4EF68200F99CD7 /* ScenarioCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioCard.swift; sourceTree = "<group>"; };
+		BCCF85702B4EFB6C00F99CD7 /* ResourceBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceBar.swift; sourceTree = "<group>"; };
+		BCCF85722B4EFC5600F99CD7 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
+		BCCF85742B4F059300F99CD7 /* StoryHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryHistoryModel.swift; sourceTree = "<group>"; };
+		BCCF85762B4F06D300F99CD7 /* LocalStoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStoriesView.swift; sourceTree = "<group>"; };
+		BCCF85782B4F099500F99CD7 /* LocalStoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStoryDetailView.swift; sourceTree = "<group>"; };
+		BCCF857A2B4F1D3600F99CD7 /* LocalStoryListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStoryListRow.swift; sourceTree = "<group>"; };
+		BCCF857C2B4F42C200F99CD7 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +87,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC340F282B4EA76300FBA119 /* Realtime in Frameworks */,
+				BC340F1A2B4EA71500FBA119 /* PostgREST in Frameworks */,
+				BC340F182B4EA71500FBA119 /* Functions in Frameworks */,
+				BC340F342B4EA78200FBA119 /* Storage in Frameworks */,
+				BC340F222B4EA76300FBA119 /* Auth in Frameworks */,
+				BC340F162B4EA71500FBA119 /* Auth in Frameworks */,
+				BCCF85512B4EA80F00F99CD7 /* Auth in Frameworks */,
+				BC340F262B4EA76300FBA119 /* PostgREST in Frameworks */,
+				BCCF85592B4EA80F00F99CD7 /* Storage in Frameworks */,
+				BC340F302B4EA78200FBA119 /* PostgREST in Frameworks */,
+				BC340F322B4EA78200FBA119 /* Realtime in Frameworks */,
+				BC340F2E2B4EA78200FBA119 /* Functions in Frameworks */,
+				BC340F242B4EA76300FBA119 /* Functions in Frameworks */,
+				BCCF85552B4EA80F00F99CD7 /* PostgREST in Frameworks */,
+				BCCF855B2B4EA80F00F99CD7 /* Supabase in Frameworks */,
+				BC340F1E2B4EA71500FBA119 /* Storage in Frameworks */,
+				BC340F2A2B4EA76300FBA119 /* Storage in Frameworks */,
+				BC340F2C2B4EA78200FBA119 /* Auth in Frameworks */,
+				BC340F1C2B4EA71500FBA119 /* Realtime in Frameworks */,
+				BCCF85572B4EA80F00F99CD7 /* Realtime in Frameworks */,
+				BCCF85532B4EA80F00F99CD7 /* Functions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +133,8 @@
 		BC340EF22B4E9FCF00FBA119 /* ChooseYourDestinyGame */ = {
 			isa = PBXGroup;
 			children = (
-				BC340EF32B4E9FCF00FBA119 /* ChooseYourDestinyGameApp.swift */,
-				BC340EF52B4E9FCF00FBA119 /* ContentView.swift */,
+				BCCF85622B4EC10600F99CD7 /* Shared */,
+				BC340F012B4EA14A00FBA119 /* Features */,
 				BC340EF72B4E9FD000FBA119 /* Assets.xcassets */,
 				BC340EF92B4E9FD000FBA119 /* Preview Content */,
 			);
@@ -65,6 +147,122 @@
 				BC340EFA2B4E9FD000FBA119 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BC340F012B4EA14A00FBA119 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				BC340F022B4EA15000FBA119 /* Story */,
+				BCCF85672B4EC37000F99CD7 /* Root */,
+				BCCF857E2B4FFFC400F99CD7 /* Onboarding */,
+				BCCF85802B4FFFD400F99CD7 /* Menu */,
+				BCCF857F2B4FFFCB00F99CD7 /* Credits */,
+				BC340EF32B4E9FCF00FBA119 /* ChooseYourDestinyGameApp.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		BC340F022B4EA15000FBA119 /* Story */ = {
+			isa = PBXGroup;
+			children = (
+				BC340F132B4EA6F600FBA119 /* DataSources */,
+				BC340F122B4EA6EE00FBA119 /* Managers */,
+				BC340F092B4EA1DC00FBA119 /* Models */,
+				BC340F082B4EA1CE00FBA119 /* Views */,
+			);
+			path = Story;
+			sourceTree = "<group>";
+		};
+		BC340F082B4EA1CE00FBA119 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BC340F052B4EA16E00FBA119 /* StoriesView.swift */,
+				BCCF85602B4EBC7700F99CD7 /* StoryDetailView.swift */,
+				BCCF85762B4F06D300F99CD7 /* LocalStoriesView.swift */,
+				BCCF85782B4F099500F99CD7 /* LocalStoryDetailView.swift */,
+				BCCF85812B50006700F99CD7 /* Widgets */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BC340F092B4EA1DC00FBA119 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BCCF857C2B4F42C200F99CD7 /* GameState.swift */,
+				BC340F0A2B4EA1ED00FBA119 /* ResourceModel.swift */,
+				BC340F0C2B4EA23C00FBA119 /* ChoiceModel.swift */,
+				BC340F0E2B4EA47300FBA119 /* ScenarioModel.swift */,
+				BC340F102B4EA4C700FBA119 /* StoryModel.swift */,
+				BCCF85742B4F059300F99CD7 /* StoryHistoryModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BC340F122B4EA6EE00FBA119 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				BCCF855E2B4EAAAE00F99CD7 /* StoryManager.swift */,
+				BCCF85722B4EFC5600F99CD7 /* GameManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		BC340F132B4EA6F600FBA119 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				BCCF855C2B4EA85F00F99CD7 /* StoryRemoteDataSource.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		BCCF85622B4EC10600F99CD7 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				BC340F1F2B4EA72700FBA119 /* SupabaseSession.swift */,
+				BCCF85632B4EC11400F99CD7 /* NavigationManager.swift */,
+				BCCF85652B4EC13E00F99CD7 /* NavigationState.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		BCCF85672B4EC37000F99CD7 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				BCCF85682B4EC37B00F99CD7 /* RootView.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		BCCF857E2B4FFFC400F99CD7 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		BCCF857F2B4FFFCB00F99CD7 /* Credits */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Credits;
+			sourceTree = "<group>";
+		};
+		BCCF85802B4FFFD400F99CD7 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		BCCF85812B50006700F99CD7 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				BCCF85702B4EFB6C00F99CD7 /* ResourceBar.swift */,
+				BCCF857A2B4F1D3600F99CD7 /* LocalStoryListRow.swift */,
+				BCCF856E2B4EF68200F99CD7 /* ScenarioCard.swift */,
+				BCCF856A2B4EE8FF00F99CD7 /* StoryListRow.swift */,
+			);
+			path = Widgets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +281,29 @@
 			dependencies = (
 			);
 			name = ChooseYourDestinyGame;
+			packageProductDependencies = (
+				BC340F152B4EA71500FBA119 /* Auth */,
+				BC340F172B4EA71500FBA119 /* Functions */,
+				BC340F192B4EA71500FBA119 /* PostgREST */,
+				BC340F1B2B4EA71500FBA119 /* Realtime */,
+				BC340F1D2B4EA71500FBA119 /* Storage */,
+				BC340F212B4EA76300FBA119 /* Auth */,
+				BC340F232B4EA76300FBA119 /* Functions */,
+				BC340F252B4EA76300FBA119 /* PostgREST */,
+				BC340F272B4EA76300FBA119 /* Realtime */,
+				BC340F292B4EA76300FBA119 /* Storage */,
+				BC340F2B2B4EA78200FBA119 /* Auth */,
+				BC340F2D2B4EA78200FBA119 /* Functions */,
+				BC340F2F2B4EA78200FBA119 /* PostgREST */,
+				BC340F312B4EA78200FBA119 /* Realtime */,
+				BC340F332B4EA78200FBA119 /* Storage */,
+				BCCF85502B4EA80F00F99CD7 /* Auth */,
+				BCCF85522B4EA80F00F99CD7 /* Functions */,
+				BCCF85542B4EA80F00F99CD7 /* PostgREST */,
+				BCCF85562B4EA80F00F99CD7 /* Realtime */,
+				BCCF85582B4EA80F00F99CD7 /* Storage */,
+				BCCF855A2B4EA80F00F99CD7 /* Supabase */,
+			);
 			productName = ChooseYourDestinyGame;
 			productReference = BC340EF02B4E9FCF00FBA119 /* ChooseYourDestinyGame.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +332,9 @@
 				Base,
 			);
 			mainGroup = BC340EE72B4E9FCF00FBA119;
+			packageReferences = (
+				BC340F142B4EA71500FBA119 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			productRefGroup = BC340EF12B4E9FCF00FBA119 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +361,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC340EF62B4E9FCF00FBA119 /* ContentView.swift in Sources */,
+				BC340F202B4EA72700FBA119 /* SupabaseSession.swift in Sources */,
+				BCCF85662B4EC13E00F99CD7 /* NavigationState.swift in Sources */,
 				BC340EF42B4E9FCF00FBA119 /* ChooseYourDestinyGameApp.swift in Sources */,
+				BCCF85752B4F059300F99CD7 /* StoryHistoryModel.swift in Sources */,
+				BCCF85792B4F099500F99CD7 /* LocalStoryDetailView.swift in Sources */,
+				BCCF855F2B4EAAAE00F99CD7 /* StoryManager.swift in Sources */,
+				BCCF85642B4EC11400F99CD7 /* NavigationManager.swift in Sources */,
+				BCCF85712B4EFB6C00F99CD7 /* ResourceBar.swift in Sources */,
+				BC340F062B4EA16E00FBA119 /* StoriesView.swift in Sources */,
+				BC340F0B2B4EA1ED00FBA119 /* ResourceModel.swift in Sources */,
+				BC340F0D2B4EA23C00FBA119 /* ChoiceModel.swift in Sources */,
+				BCCF85732B4EFC5600F99CD7 /* GameManager.swift in Sources */,
+				BCCF857D2B4F42C200F99CD7 /* GameState.swift in Sources */,
+				BCCF855D2B4EA85F00F99CD7 /* StoryRemoteDataSource.swift in Sources */,
+				BCCF85772B4F06D300F99CD7 /* LocalStoriesView.swift in Sources */,
+				BCCF85692B4EC37B00F99CD7 /* RootView.swift in Sources */,
+				BCCF856B2B4EE8FF00F99CD7 /* StoryListRow.swift in Sources */,
+				BCCF857B2B4F1D3600F99CD7 /* LocalStoryListRow.swift in Sources */,
+				BCCF856F2B4EF68200F99CD7 /* ScenarioCard.swift in Sources */,
+				BCCF85612B4EBC7700F99CD7 /* StoryDetailView.swift in Sources */,
+				BC340F0F2B4EA47300FBA119 /* ScenarioModel.swift in Sources */,
+				BC340F112B4EA4C700FBA119 /* StoryModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +586,125 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BC340F142B4EA71500FBA119 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase-community/supabase-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BC340F152B4EA71500FBA119 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC340F142B4EA71500FBA119 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		BC340F172B4EA71500FBA119 /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC340F142B4EA71500FBA119 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		BC340F192B4EA71500FBA119 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC340F142B4EA71500FBA119 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		BC340F1B2B4EA71500FBA119 /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC340F142B4EA71500FBA119 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		BC340F1D2B4EA71500FBA119 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC340F142B4EA71500FBA119 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		BC340F212B4EA76300FBA119 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC340F142B4EA71500FBA119 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		BC340F232B4EA76300FBA119 /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC340F142B4EA71500FBA119 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		BC340F252B4EA76300FBA119 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC340F142B4EA71500FBA119 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		BC340F272B4EA76300FBA119 /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC340F142B4EA71500FBA119 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		BC340F292B4EA76300FBA119 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC340F142B4EA71500FBA119 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		BC340F2B2B4EA78200FBA119 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC340F142B4EA71500FBA119 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		BC340F2D2B4EA78200FBA119 /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC340F142B4EA71500FBA119 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		BC340F2F2B4EA78200FBA119 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC340F142B4EA71500FBA119 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		BC340F312B4EA78200FBA119 /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC340F142B4EA71500FBA119 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		BC340F332B4EA78200FBA119 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC340F142B4EA71500FBA119 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		BCCF85502B4EA80F00F99CD7 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC340F142B4EA71500FBA119 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		BCCF85522B4EA80F00F99CD7 /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC340F142B4EA71500FBA119 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		BCCF85542B4EA80F00F99CD7 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC340F142B4EA71500FBA119 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		BCCF85562B4EA80F00F99CD7 /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC340F142B4EA71500FBA119 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		BCCF85582B4EA80F00F99CD7 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC340F142B4EA71500FBA119 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		BCCF855A2B4EA80F00F99CD7 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC340F142B4EA71500FBA119 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BC340EE82B4E9FCF00FBA119 /* Project object */;
 }
