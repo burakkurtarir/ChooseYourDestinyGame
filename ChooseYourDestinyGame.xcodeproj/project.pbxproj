@@ -39,6 +39,7 @@
 		BC8AAEFB2B56B5B5001069BB /* StoryHistoryDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8AAEFA2B56B5B5001069BB /* StoryHistoryDTO.swift */; };
 		BC8AAEFD2B56B721001069BB /* GameStateDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8AAEFC2B56B721001069BB /* GameStateDTO.swift */; };
 		BC8AAF002B56E38E001069BB /* StoryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8AAEFF2B56E38E001069BB /* StoryExtensions.swift */; };
+		BC8AAF052B570784001069BB /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8AAF042B570784001069BB /* Configuration.swift */; };
 		BCCF85512B4EA80F00F99CD7 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = BCCF85502B4EA80F00F99CD7 /* Auth */; };
 		BCCF85532B4EA80F00F99CD7 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = BCCF85522B4EA80F00F99CD7 /* Functions */; };
 		BCCF85552B4EA80F00F99CD7 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = BCCF85542B4EA80F00F99CD7 /* PostgREST */; };
@@ -80,6 +81,8 @@
 		BC8AAEFA2B56B5B5001069BB /* StoryHistoryDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryHistoryDTO.swift; sourceTree = "<group>"; };
 		BC8AAEFC2B56B721001069BB /* GameStateDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStateDTO.swift; sourceTree = "<group>"; };
 		BC8AAEFF2B56E38E001069BB /* StoryExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryExtensions.swift; sourceTree = "<group>"; };
+		BC8AAF022B570591001069BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BC8AAF042B570784001069BB /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		BCCF855C2B4EA85F00F99CD7 /* StoryRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryRemoteDataSource.swift; sourceTree = "<group>"; };
 		BCCF855E2B4EAAAE00F99CD7 /* StoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryManager.swift; sourceTree = "<group>"; };
 		BCCF85602B4EBC7700F99CD7 /* StoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailView.swift; sourceTree = "<group>"; };
@@ -147,6 +150,8 @@
 		BC340EF22B4E9FCF00FBA119 /* ChooseYourDestinyGame */ = {
 			isa = PBXGroup;
 			children = (
+				BC8AAF022B570591001069BB /* Info.plist */,
+				BC8AAF062B570914001069BB /* Configuration */,
 				BCCF85622B4EC10600F99CD7 /* Shared */,
 				BC340F012B4EA14A00FBA119 /* Features */,
 				BC340EF72B4E9FD000FBA119 /* Assets.xcassets */,
@@ -260,12 +265,20 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		BC8AAF062B570914001069BB /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		BCCF85622B4EC10600F99CD7 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
 				BC340F1F2B4EA72700FBA119 /* SupabaseSession.swift */,
 				BCCF85632B4EC11400F99CD7 /* NavigationManager.swift */,
 				BCCF85652B4EC13E00F99CD7 /* NavigationState.swift */,
+				BC8AAF042B570784001069BB /* Configuration.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -412,6 +425,7 @@
 				BC8AAEF32B56B28C001069BB /* ResourceDTO.swift in Sources */,
 				BCCF85792B4F099500F99CD7 /* LocalStoryDetailView.swift in Sources */,
 				BCCF855F2B4EAAAE00F99CD7 /* StoryManager.swift in Sources */,
+				BC8AAF052B570784001069BB /* Configuration.swift in Sources */,
 				BCCF85642B4EC11400F99CD7 /* NavigationManager.swift in Sources */,
 				BCCF85712B4EFB6C00F99CD7 /* ResourceBar.swift in Sources */,
 				BC340F062B4EA16E00FBA119 /* StoriesView.swift in Sources */,
@@ -570,6 +584,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ChooseYourDestinyGame/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChooseYourDestinyGame/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -598,6 +613,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ChooseYourDestinyGame/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChooseYourDestinyGame/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
