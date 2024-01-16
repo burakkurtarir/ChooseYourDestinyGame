@@ -13,7 +13,7 @@ struct ResourceBar: View {
     
     var body: some View {
         HStack {
-            ForEach(resources, id: \.self) { resource in
+            ForEach(resources, id: \.name) { resource in
                 VStack {
                     Image(systemName: "heart.fill")
                     Text("\(playerResources[resource.name] ?? 1)")

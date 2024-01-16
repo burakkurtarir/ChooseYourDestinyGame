@@ -6,21 +6,16 @@
 //
 
 import Foundation
+import Observation
 
 @Observable
-final class ResourceModel: Codable, Hashable {
+final class ResourceModel: Decodable, Hashable {
     let change: Int
     let name: String
     
     init(change: Int, name: String) {
         self.change = change
         self.name = name
-    }
-    
-    enum CodingKeys: CodingKey {
-        case change
-        case name
-        case _$observationRegistrar
     }
     
     static func == (lhs: ResourceModel, rhs: ResourceModel) -> Bool {

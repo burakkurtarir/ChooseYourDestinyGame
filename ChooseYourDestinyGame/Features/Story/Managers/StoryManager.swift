@@ -22,6 +22,9 @@ class StoryManager {
     func fetchStories() async {
         do {
             stories = try await storyRemoteDataSource.fetchAllStories()
+        } catch let error as NSError {
+            print(error.description)
+            storiesError = error.localizedDescription
         } catch {
             storiesError = error.localizedDescription
         }

@@ -31,6 +31,14 @@
 		BC340F302B4EA78200FBA119 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = BC340F2F2B4EA78200FBA119 /* PostgREST */; };
 		BC340F322B4EA78200FBA119 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = BC340F312B4EA78200FBA119 /* Realtime */; };
 		BC340F342B4EA78200FBA119 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = BC340F332B4EA78200FBA119 /* Storage */; };
+		BC7298822B53F80E0012B797 /* StoryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7298812B53F80E0012B797 /* StoryHelper.swift */; };
+		BC8AAEF32B56B28C001069BB /* ResourceDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8AAEF22B56B28C001069BB /* ResourceDTO.swift */; };
+		BC8AAEF52B56B43D001069BB /* ChoiceDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8AAEF42B56B43D001069BB /* ChoiceDTO.swift */; };
+		BC8AAEF72B56B4F8001069BB /* ScenarioDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8AAEF62B56B4F8001069BB /* ScenarioDTO.swift */; };
+		BC8AAEF92B56B54F001069BB /* StoryDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8AAEF82B56B54F001069BB /* StoryDTO.swift */; };
+		BC8AAEFB2B56B5B5001069BB /* StoryHistoryDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8AAEFA2B56B5B5001069BB /* StoryHistoryDTO.swift */; };
+		BC8AAEFD2B56B721001069BB /* GameStateDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8AAEFC2B56B721001069BB /* GameStateDTO.swift */; };
+		BC8AAF002B56E38E001069BB /* StoryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8AAEFF2B56E38E001069BB /* StoryExtensions.swift */; };
 		BCCF85512B4EA80F00F99CD7 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = BCCF85502B4EA80F00F99CD7 /* Auth */; };
 		BCCF85532B4EA80F00F99CD7 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = BCCF85522B4EA80F00F99CD7 /* Functions */; };
 		BCCF85552B4EA80F00F99CD7 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = BCCF85542B4EA80F00F99CD7 /* PostgREST */; };
@@ -47,7 +55,6 @@
 		BCCF856F2B4EF68200F99CD7 /* ScenarioCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF856E2B4EF68200F99CD7 /* ScenarioCard.swift */; };
 		BCCF85712B4EFB6C00F99CD7 /* ResourceBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF85702B4EFB6C00F99CD7 /* ResourceBar.swift */; };
 		BCCF85732B4EFC5600F99CD7 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF85722B4EFC5600F99CD7 /* GameManager.swift */; };
-		BCCF85752B4F059300F99CD7 /* StoryHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF85742B4F059300F99CD7 /* StoryHistoryModel.swift */; };
 		BCCF85772B4F06D300F99CD7 /* LocalStoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF85762B4F06D300F99CD7 /* LocalStoriesView.swift */; };
 		BCCF85792B4F099500F99CD7 /* LocalStoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF85782B4F099500F99CD7 /* LocalStoryDetailView.swift */; };
 		BCCF857B2B4F1D3600F99CD7 /* LocalStoryListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF857A2B4F1D3600F99CD7 /* LocalStoryListRow.swift */; };
@@ -65,6 +72,14 @@
 		BC340F0E2B4EA47300FBA119 /* ScenarioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioModel.swift; sourceTree = "<group>"; };
 		BC340F102B4EA4C700FBA119 /* StoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryModel.swift; sourceTree = "<group>"; };
 		BC340F1F2B4EA72700FBA119 /* SupabaseSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseSession.swift; sourceTree = "<group>"; };
+		BC7298812B53F80E0012B797 /* StoryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryHelper.swift; sourceTree = "<group>"; };
+		BC8AAEF22B56B28C001069BB /* ResourceDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceDTO.swift; sourceTree = "<group>"; };
+		BC8AAEF42B56B43D001069BB /* ChoiceDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceDTO.swift; sourceTree = "<group>"; };
+		BC8AAEF62B56B4F8001069BB /* ScenarioDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioDTO.swift; sourceTree = "<group>"; };
+		BC8AAEF82B56B54F001069BB /* StoryDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDTO.swift; sourceTree = "<group>"; };
+		BC8AAEFA2B56B5B5001069BB /* StoryHistoryDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryHistoryDTO.swift; sourceTree = "<group>"; };
+		BC8AAEFC2B56B721001069BB /* GameStateDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStateDTO.swift; sourceTree = "<group>"; };
+		BC8AAEFF2B56E38E001069BB /* StoryExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryExtensions.swift; sourceTree = "<group>"; };
 		BCCF855C2B4EA85F00F99CD7 /* StoryRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryRemoteDataSource.swift; sourceTree = "<group>"; };
 		BCCF855E2B4EAAAE00F99CD7 /* StoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryManager.swift; sourceTree = "<group>"; };
 		BCCF85602B4EBC7700F99CD7 /* StoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailView.swift; sourceTree = "<group>"; };
@@ -75,7 +90,6 @@
 		BCCF856E2B4EF68200F99CD7 /* ScenarioCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioCard.swift; sourceTree = "<group>"; };
 		BCCF85702B4EFB6C00F99CD7 /* ResourceBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceBar.swift; sourceTree = "<group>"; };
 		BCCF85722B4EFC5600F99CD7 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
-		BCCF85742B4F059300F99CD7 /* StoryHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryHistoryModel.swift; sourceTree = "<group>"; };
 		BCCF85762B4F06D300F99CD7 /* LocalStoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStoriesView.swift; sourceTree = "<group>"; };
 		BCCF85782B4F099500F99CD7 /* LocalStoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStoryDetailView.swift; sourceTree = "<group>"; };
 		BCCF857A2B4F1D3600F99CD7 /* LocalStoryListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStoryListRow.swift; sourceTree = "<group>"; };
@@ -165,6 +179,9 @@
 		BC340F022B4EA15000FBA119 /* Story */ = {
 			isa = PBXGroup;
 			children = (
+				BC8AAEFE2B56E36E001069BB /* Extensions */,
+				BC8AAEF12B56AD4D001069BB /* DTOs */,
+				BC7298802B53F8030012B797 /* Helpers */,
 				BC340F132B4EA6F600FBA119 /* DataSources */,
 				BC340F122B4EA6EE00FBA119 /* Managers */,
 				BC340F092B4EA1DC00FBA119 /* Models */,
@@ -188,12 +205,11 @@
 		BC340F092B4EA1DC00FBA119 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BCCF857C2B4F42C200F99CD7 /* GameState.swift */,
 				BC340F0A2B4EA1ED00FBA119 /* ResourceModel.swift */,
 				BC340F0C2B4EA23C00FBA119 /* ChoiceModel.swift */,
 				BC340F0E2B4EA47300FBA119 /* ScenarioModel.swift */,
 				BC340F102B4EA4C700FBA119 /* StoryModel.swift */,
-				BCCF85742B4F059300F99CD7 /* StoryHistoryModel.swift */,
+				BCCF857C2B4F42C200F99CD7 /* GameState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -213,6 +229,35 @@
 				BCCF855C2B4EA85F00F99CD7 /* StoryRemoteDataSource.swift */,
 			);
 			path = DataSources;
+			sourceTree = "<group>";
+		};
+		BC7298802B53F8030012B797 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BC7298812B53F80E0012B797 /* StoryHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BC8AAEF12B56AD4D001069BB /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				BC8AAEF22B56B28C001069BB /* ResourceDTO.swift */,
+				BC8AAEF42B56B43D001069BB /* ChoiceDTO.swift */,
+				BC8AAEF62B56B4F8001069BB /* ScenarioDTO.swift */,
+				BC8AAEF82B56B54F001069BB /* StoryDTO.swift */,
+				BC8AAEFA2B56B5B5001069BB /* StoryHistoryDTO.swift */,
+				BC8AAEFC2B56B721001069BB /* GameStateDTO.swift */,
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		BC8AAEFE2B56E36E001069BB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BC8AAEFF2B56E38E001069BB /* StoryExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		BCCF85622B4EC10600F99CD7 /* Shared */ = {
@@ -258,9 +303,9 @@
 			isa = PBXGroup;
 			children = (
 				BCCF85702B4EFB6C00F99CD7 /* ResourceBar.swift */,
-				BCCF857A2B4F1D3600F99CD7 /* LocalStoryListRow.swift */,
 				BCCF856E2B4EF68200F99CD7 /* ScenarioCard.swift */,
 				BCCF856A2B4EE8FF00F99CD7 /* StoryListRow.swift */,
+				BCCF857A2B4F1D3600F99CD7 /* LocalStoryListRow.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -364,25 +409,32 @@
 				BC340F202B4EA72700FBA119 /* SupabaseSession.swift in Sources */,
 				BCCF85662B4EC13E00F99CD7 /* NavigationState.swift in Sources */,
 				BC340EF42B4E9FCF00FBA119 /* ChooseYourDestinyGameApp.swift in Sources */,
-				BCCF85752B4F059300F99CD7 /* StoryHistoryModel.swift in Sources */,
+				BC8AAEF32B56B28C001069BB /* ResourceDTO.swift in Sources */,
 				BCCF85792B4F099500F99CD7 /* LocalStoryDetailView.swift in Sources */,
 				BCCF855F2B4EAAAE00F99CD7 /* StoryManager.swift in Sources */,
 				BCCF85642B4EC11400F99CD7 /* NavigationManager.swift in Sources */,
 				BCCF85712B4EFB6C00F99CD7 /* ResourceBar.swift in Sources */,
 				BC340F062B4EA16E00FBA119 /* StoriesView.swift in Sources */,
 				BC340F0B2B4EA1ED00FBA119 /* ResourceModel.swift in Sources */,
+				BC8AAEF72B56B4F8001069BB /* ScenarioDTO.swift in Sources */,
 				BC340F0D2B4EA23C00FBA119 /* ChoiceModel.swift in Sources */,
+				BC8AAF002B56E38E001069BB /* StoryExtensions.swift in Sources */,
 				BCCF85732B4EFC5600F99CD7 /* GameManager.swift in Sources */,
 				BCCF857D2B4F42C200F99CD7 /* GameState.swift in Sources */,
 				BCCF855D2B4EA85F00F99CD7 /* StoryRemoteDataSource.swift in Sources */,
 				BCCF85772B4F06D300F99CD7 /* LocalStoriesView.swift in Sources */,
 				BCCF85692B4EC37B00F99CD7 /* RootView.swift in Sources */,
+				BC8AAEF92B56B54F001069BB /* StoryDTO.swift in Sources */,
 				BCCF856B2B4EE8FF00F99CD7 /* StoryListRow.swift in Sources */,
+				BC8AAEF52B56B43D001069BB /* ChoiceDTO.swift in Sources */,
 				BCCF857B2B4F1D3600F99CD7 /* LocalStoryListRow.swift in Sources */,
 				BCCF856F2B4EF68200F99CD7 /* ScenarioCard.swift in Sources */,
 				BCCF85612B4EBC7700F99CD7 /* StoryDetailView.swift in Sources */,
 				BC340F0F2B4EA47300FBA119 /* ScenarioModel.swift in Sources */,
+				BC8AAEFD2B56B721001069BB /* GameStateDTO.swift in Sources */,
 				BC340F112B4EA4C700FBA119 /* StoryModel.swift in Sources */,
+				BC8AAEFB2B56B5B5001069BB /* StoryHistoryDTO.swift in Sources */,
+				BC7298822B53F80E0012B797 /* StoryHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

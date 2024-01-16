@@ -16,7 +16,7 @@ struct ChooseYourDestinyGameApp: App {
         WindowGroup {
             RootView()
         }
-        .modelContainer(for: StoryHistoryModel.self)
+        .modelContainer(for: StoryHistoryDTO.self)
         .environment(\.storyManager, storyManager)
     }
 }

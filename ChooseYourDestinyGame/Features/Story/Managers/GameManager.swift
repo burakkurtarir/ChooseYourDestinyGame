@@ -23,7 +23,7 @@ class GameManager {
         if let currentScenario = story.scenarios.first(where: { $0.id == currentScenarioId }) {
             self.currentScenario = currentScenario
         } else {
-            changeGameState(.error(message: "Current Scenario Not Found"))
+            changeGameState(.error("Current Scenario Not Found"))
         }
     }
     

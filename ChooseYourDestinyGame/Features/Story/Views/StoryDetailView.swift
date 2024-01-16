@@ -9,23 +9,13 @@ import SwiftUI
 
 struct StoryDetailView: View {
     @Environment(\.modelContext) private var modelContext
-    @State private var storyHistory: StoryHistoryModel
+    @State private var storyHistory: StoryHistoryDTO?
     @State private var gameManager = GameManager()
     
     let story: StoryModel
     
     init(story: StoryModel) {
-        let playerResources = story.getDefaultPlayerResources()
-        
         self.story = story
-        self.storyHistory = StoryHistoryModel(currentScenarioId: 1, story: story, createdAt: .now, updatedAt: .now, playerResources: playerResources, gameState: .inGame)
-        
-        gameManager.initManager(
-            playerResources: playerResources,
-            currentScenarioId: 1,
-            story: story
-        )
-        gameManager.onGameStateChanged = listenGameState
     }
     
     var body: some View {
@@ -51,18 +41,36 @@ struct StoryDetailView: View {
             }
         }
         .onAppear {
+            setup()
+            guard let storyHistory else { return }
             modelContext.insert(storyHistory)
         }
     }
     
+    func setup() {
+        let playerResources = StoryHelper.getDefaultPlayerResources(self.story.resources)
+        
+        gameManager.initManager(
+            playerResources: playerResources,
+            currentScenarioId: 1,
+            story: story)
+        gameManager.onGameStateChanged = listenGameState
+        
+        storyHistory = StoryHistoryDTO(currentScenarioId: 1, story: story.toDTO(), createdAt: .now, updatedAt: .now, playerResources: playerResources, gameState: .inGame)
+    }
+    
     func updateStoryHistory() {
+        // Maybe error handling here, maybe
+        guard let storyHistory else { return }
         storyHistory.updatedAt = .now
         storyHistory.currentScenarioId = gameManager.currentScenario.id
         storyHistory.playerResources = gameManager.playerResources
     }
     
     func listenGameState(_ state: GameState) {
-        storyHistory.gameState = state.textValue
+        // Maybe error handling here, maybe
+        guard let storyHistory else { return }
+        storyHistory.gameState = state.toDTO()
     }
 }
 

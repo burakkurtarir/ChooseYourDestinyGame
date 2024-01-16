@@ -6,16 +6,17 @@
 //
 
 import Foundation
+import Observation
 
 @Observable
-final class ChoiceModel: Codable, Hashable {
+final class ChoiceModel: Decodable, Hashable {
     let id: Int
     let title: String
     let resources: [ResourceModel]
     let description: String
     let nextScenarioId: Int?
     
-    init(id: Int, title: String, resources: [ResourceModel], description: String, nextScenarioId: Int?) {
+    init(id: Int, title: String, resources: [ResourceModel] = [], description: String, nextScenarioId: Int?) {
         self.id = id
         self.title = title
         self.resources = resources
@@ -29,16 +30,23 @@ final class ChoiceModel: Codable, Hashable {
         case resources
         case description
         case nextScenarioId = "next_scenario_id"
-        case _$observationRegistrar
     }
     
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(description)
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.id = try container.decode(Int.self, forKey: .id)
+        self.title = try container.decode(String.self, forKey: .title)
+        self.resources = try container.decode([ResourceModel].self, forKey: .resources)
+        self.description = try container.decode(String.self, forKey: .description)
+        self.nextScenarioId = try? container.decode(Int.self, forKey: .nextScenarioId)
     }
     
     static func == (lhs: ChoiceModel, rhs: ChoiceModel) -> Bool {
-        return lhs.id == rhs.id && lhs.title == rhs.title && lhs.resources == rhs.resources &&
-        lhs.description == rhs.description  && lhs.nextScenarioId == rhs.nextScenarioId
+        return lhs.id == rhs.id && lhs.title == rhs.title && lhs.resources == rhs.resources && lhs.description == rhs.description
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
     }
     
     static let example = ChoiceModel(

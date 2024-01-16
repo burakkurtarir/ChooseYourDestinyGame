@@ -11,18 +11,14 @@ import SwiftData
 struct LocalStoriesView: View {
     @Environment(\.navigationManager) private var navigationManager
     
-    @Query(sort: [.init(\StoryHistoryModel.updatedAt, order: .reverse)])
-    private var storyHistories: [StoryHistoryModel]
+    @Query(sort: \StoryHistoryDTO.updatedAt, order: .reverse)
+    private var storyHistories: [StoryHistoryDTO]
     
     var body: some View {
         VStack {
             ForEach(storyHistories) { history in
-                if let story = history.getDecodedStory() {
-                    LocalStoryListRow(storyHistory: history) {
-                        navigationManager.push(.localStoryDetail(history))
-                    }
-                } else {
-                    Text("Story Broken")
+                LocalStoryListRow(storyHistory: history) {
+                    navigationManager.push(.localStoryDetail(history))
                 }
             }
         }
@@ -31,6 +27,6 @@ struct LocalStoriesView: View {
     }
 }
 
-#Preview {
-    LocalStoriesView()
-}
+//#Preview {
+//    LocalStoriesView()
+//}

@@ -28,6 +28,9 @@ LocalStoryDetailView: Same functionality as StoryDetailView with different param
 # What about local database?
 SwiftData. I know it's still buggy but I can't resist new tech
 
+# Navigation
+NavigationStack
+
 # What can I do to improve this project?
 I can implement pagination for the list views.
 Better error handling.

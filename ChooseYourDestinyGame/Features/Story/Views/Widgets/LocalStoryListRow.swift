@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct LocalStoryListRow: View {
-    let storyHistory: StoryHistoryModel
+    let storyHistory: StoryHistoryDTO
     let onTap: () -> Void
+    
     var story: StoryModel {
-        return storyHistory.getDecodedStory()!
+        storyHistory.story.toModel()
     }
     
     var body: some View {
@@ -19,7 +20,7 @@ struct LocalStoryListRow: View {
             Text(story.title)
             Text(story.description)
             Text("Current scenario id: \(storyHistory.currentScenarioId)")
-            Text("State: \(storyHistory.gameState)")
+            Text("State: ")
             Button("PLAY") {
                 onTap()
             }
@@ -28,8 +29,8 @@ struct LocalStoryListRow: View {
     }
 }
 
-#Preview {
-    LocalStoryListRow(storyHistory: StoryHistoryModel.examle) {
-        
-    }
-}
+//#Preview {
+//    LocalStoryListRow(storyHistory: StoryHistoryModel.examle) {
+//
+//    }
+//}

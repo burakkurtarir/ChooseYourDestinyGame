@@ -16,7 +16,7 @@ struct ScenarioCard: View {
             Text(scenario.text)
             
             VStack {
-                ForEach(scenario.choices, id: \.self) { choice in
+                ForEach(scenario.choices, id: \.id) { choice in
                     Button(choice.description) {
                         onTap(choice)
                     }

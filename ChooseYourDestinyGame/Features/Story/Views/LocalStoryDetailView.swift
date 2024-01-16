@@ -10,19 +10,13 @@ import SwiftUI
 struct LocalStoryDetailView: View {
     @State private var gameManager = GameManager()
     
-    let storyHistory: StoryHistoryModel
+    let storyHistory: StoryHistoryDTO
     var story: StoryModel {
-        storyHistory.getDecodedStory()!
+        storyHistory.story.toModel()
     }
     
-    init(storyHistory: StoryHistoryModel) {
+    init(storyHistory: StoryHistoryDTO) {
         self.storyHistory = storyHistory
-        
-        gameManager.initManager(
-            playerResources: storyHistory.playerResources,
-            currentScenarioId: storyHistory.currentScenarioId,
-            story: story)
-        gameManager.onGameStateChanged = listenGameState
     }
     
     var body: some View {
@@ -38,7 +32,7 @@ struct LocalStoryDetailView: View {
                 VStack {
                     ResourceBar(
                         resources: story.resources,
-                        playerResources: storyHistory.playerResources)
+                        playerResources: gameManager.playerResources)
                     
                     ScenarioCard(scenario: gameManager.currentScenario) { choice in
                         gameManager.makeChoice(choice)
@@ -47,6 +41,17 @@ struct LocalStoryDetailView: View {
                 }
             }
         }
+        .onAppear {
+            setup()
+        }
+    }
+    
+    func setup() {
+        gameManager.initManager(
+            playerResources: storyHistory.playerResources,
+            currentScenarioId: storyHistory.currentScenarioId,
+            story: story)
+        gameManager.onGameStateChanged = listenGameState
     }
     
     func updateStoryHistory() {
@@ -56,10 +61,10 @@ struct LocalStoryDetailView: View {
     }
     
     func listenGameState(_ state: GameState) {
-        storyHistory.gameState = state.textValue
+        storyHistory.gameState = state.toDTO()
     }
 }
 
-#Preview {
-    LocalStoryDetailView(storyHistory: .examle)
-}
+//#Preview {
+//    LocalStoryDetailView(storyHistory: .examle)
+//}

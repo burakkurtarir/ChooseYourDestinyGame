@@ -6,32 +6,26 @@
 //
 
 import Foundation
+import Observation
 
 @Observable
-final class ScenarioModel: Codable, Hashable {
+final class ScenarioModel: Decodable, Hashable {
     let id: Int
     let text: String
     let choices: [ChoiceModel]
     
-    init(id: Int, text: String, choices: [ChoiceModel]) {
+    init(id: Int, text: String, choices: [ChoiceModel] = []) {
         self.id = id
         self.text = text
         self.choices = choices
     }
     
-    enum CodingKeys: String, CodingKey {
-        case id
-        case text
-        case choices
-        case _$observationRegistrar
+    static func == (lhs: ScenarioModel, rhs: ScenarioModel) -> Bool {
+        return lhs.id == rhs.id && lhs.text == rhs.text && lhs.choices == rhs.choices
     }
     
     func hash(into hasher: inout Hasher) {
-        hasher.combine(text)
-    }
-    
-    static func == (lhs: ScenarioModel, rhs: ScenarioModel) -> Bool {
-        return lhs.id == rhs.id && lhs.text == rhs.text && lhs.choices == rhs.choices
+        hasher.combine(id)
     }
     
     static let example = ScenarioModel(

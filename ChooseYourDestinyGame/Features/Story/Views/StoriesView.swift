@@ -18,9 +18,9 @@ struct StoriesView: View {
             } else if let error = storyManager.storiesError {
                 Text(error)
             } else {
-                ForEach(storyManager.stories, id: \.self) { story in
+                ForEach(storyManager.stories, id: \.id) { story in
                     StoryListRow(story: story) {
-                        navigateToDetail(story)
+                        navigationManager.push(.storyDetail(story))
                     }
                 }
             }
@@ -30,10 +30,6 @@ struct StoriesView: View {
         .task {
             await storyManager.fetchStories()
         }
-    }
-    
-    func navigateToDetail(_ story: StoryModel) {
-        navigationManager.push(.storyDetail(story))
     }
 }
 

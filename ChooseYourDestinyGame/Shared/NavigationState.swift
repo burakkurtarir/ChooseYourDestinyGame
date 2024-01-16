@@ -13,5 +13,5 @@ enum NavigationState: Hashable {
     case menu
     case credits
     case localStories
-    case localStoryDetail(_ storyHistory: StoryHistoryModel)
+    case localStoryDetail(_ storyHistory: StoryHistoryDTO)
 }
