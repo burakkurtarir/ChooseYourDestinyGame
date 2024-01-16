@@ -83,6 +83,7 @@
 		BC8AAEFF2B56E38E001069BB /* StoryExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryExtensions.swift; sourceTree = "<group>"; };
 		BC8AAF022B570591001069BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BC8AAF042B570784001069BB /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		BC8AAF072B5709CC001069BB /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		BCCF855C2B4EA85F00F99CD7 /* StoryRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryRemoteDataSource.swift; sourceTree = "<group>"; };
 		BCCF855E2B4EAAAE00F99CD7 /* StoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryManager.swift; sourceTree = "<group>"; };
 		BCCF85602B4EBC7700F99CD7 /* StoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailView.swift; sourceTree = "<group>"; };
@@ -268,6 +269,7 @@
 		BC8AAF062B570914001069BB /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				BC8AAF072B5709CC001069BB /* Development.xcconfig */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -457,6 +459,7 @@
 /* Begin XCBuildConfiguration section */
 		BC340EFC2B4E9FD000FBA119 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC8AAF072B5709CC001069BB /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
