@@ -21,6 +21,12 @@ struct StoryDetailView: View {
     var body: some View {
         ZStack {
             switch gameManager.gameState {
+            case .error(message: let message):
+                Text(message)
+            case .victory:
+                Text("Victory")
+            case .defeat:
+                Text("Defeat")
             case .inGame:
                 VStack {
                     ResourceBar(
@@ -32,12 +38,6 @@ struct StoryDetailView: View {
                         updateStoryHistory()
                     }
                 }
-            case .error(message: let message):
-                Text(message)
-            case .victory:
-                Text("Victory")
-            case .defeat:
-                Text("Defeat")
             }
         }
         .onAppear {
@@ -60,7 +60,6 @@ struct StoryDetailView: View {
     }
     
     func updateStoryHistory() {
-        // Maybe error handling here, maybe
         guard let storyHistory else { return }
         storyHistory.updatedAt = .now
         storyHistory.currentScenarioId = gameManager.currentScenario.id
@@ -68,7 +67,6 @@ struct StoryDetailView: View {
     }
     
     func listenGameState(_ state: GameState) {
-        // Maybe error handling here, maybe
         guard let storyHistory else { return }
         storyHistory.gameState = state.toDTO()
     }

@@ -14,7 +14,6 @@ class SupabaseSession {
     let client: SupabaseClient
     
     private init() {
-        // TODO: Move the secret values to the environment
         client = SupabaseClient(supabaseURL: URL(string: "https://hbelexobqfopthoiamge.supabase.co")!, supabaseKey: Configuration.supabaseApiKey)
     }
 }

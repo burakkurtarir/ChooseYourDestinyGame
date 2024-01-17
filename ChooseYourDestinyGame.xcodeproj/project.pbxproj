@@ -40,6 +40,9 @@
 		BC8AAEFD2B56B721001069BB /* GameStateDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8AAEFC2B56B721001069BB /* GameStateDTO.swift */; };
 		BC8AAF002B56E38E001069BB /* StoryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8AAEFF2B56E38E001069BB /* StoryExtensions.swift */; };
 		BC8AAF052B570784001069BB /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8AAF042B570784001069BB /* Configuration.swift */; };
+		BC8AAF092B57DA73001069BB /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8AAF082B57DA73001069BB /* MenuView.swift */; };
+		BC8AAF0C2B57EA77001069BB /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8AAF0B2B57EA77001069BB /* MenuButton.swift */; };
+		BC8AAF0E2B57EAB6001069BB /* TitleTextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8AAF0D2B57EAB6001069BB /* TitleTextModifier.swift */; };
 		BCCF85512B4EA80F00F99CD7 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = BCCF85502B4EA80F00F99CD7 /* Auth */; };
 		BCCF85532B4EA80F00F99CD7 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = BCCF85522B4EA80F00F99CD7 /* Functions */; };
 		BCCF85552B4EA80F00F99CD7 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = BCCF85542B4EA80F00F99CD7 /* PostgREST */; };
@@ -84,6 +87,9 @@
 		BC8AAF022B570591001069BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BC8AAF042B570784001069BB /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		BC8AAF072B5709CC001069BB /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		BC8AAF082B57DA73001069BB /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		BC8AAF0B2B57EA77001069BB /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
+		BC8AAF0D2B57EAB6001069BB /* TitleTextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextModifier.swift; sourceTree = "<group>"; };
 		BCCF855C2B4EA85F00F99CD7 /* StoryRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryRemoteDataSource.swift; sourceTree = "<group>"; };
 		BCCF855E2B4EAAAE00F99CD7 /* StoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryManager.swift; sourceTree = "<group>"; };
 		BCCF85602B4EBC7700F99CD7 /* StoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailView.swift; sourceTree = "<group>"; };
@@ -274,6 +280,15 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		BC8AAF0A2B57EA65001069BB /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				BC8AAF0D2B57EAB6001069BB /* TitleTextModifier.swift */,
+				BC8AAF0B2B57EA77001069BB /* MenuButton.swift */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
 		BCCF85622B4EC10600F99CD7 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,6 +325,8 @@
 		BCCF85802B4FFFD400F99CD7 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				BC8AAF082B57DA73001069BB /* MenuView.swift */,
+				BC8AAF0A2B57EA65001069BB /* Widgets */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -423,6 +440,7 @@
 			files = (
 				BC340F202B4EA72700FBA119 /* SupabaseSession.swift in Sources */,
 				BCCF85662B4EC13E00F99CD7 /* NavigationState.swift in Sources */,
+				BC8AAF092B57DA73001069BB /* MenuView.swift in Sources */,
 				BC340EF42B4E9FCF00FBA119 /* ChooseYourDestinyGameApp.swift in Sources */,
 				BC8AAEF32B56B28C001069BB /* ResourceDTO.swift in Sources */,
 				BCCF85792B4F099500F99CD7 /* LocalStoryDetailView.swift in Sources */,
@@ -443,11 +461,13 @@
 				BC8AAEF92B56B54F001069BB /* StoryDTO.swift in Sources */,
 				BCCF856B2B4EE8FF00F99CD7 /* StoryListRow.swift in Sources */,
 				BC8AAEF52B56B43D001069BB /* ChoiceDTO.swift in Sources */,
+				BC8AAF0E2B57EAB6001069BB /* TitleTextModifier.swift in Sources */,
 				BCCF857B2B4F1D3600F99CD7 /* LocalStoryListRow.swift in Sources */,
 				BCCF856F2B4EF68200F99CD7 /* ScenarioCard.swift in Sources */,
 				BCCF85612B4EBC7700F99CD7 /* StoryDetailView.swift in Sources */,
 				BC340F0F2B4EA47300FBA119 /* ScenarioModel.swift in Sources */,
 				BC8AAEFD2B56B721001069BB /* GameStateDTO.swift in Sources */,
+				BC8AAF0C2B57EA77001069BB /* MenuButton.swift in Sources */,
 				BC340F112B4EA4C700FBA119 /* StoryModel.swift in Sources */,
 				BC8AAEFB2B56B5B5001069BB /* StoryHistoryDTO.swift in Sources */,
 				BC7298822B53F80E0012B797 /* StoryHelper.swift in Sources */,
