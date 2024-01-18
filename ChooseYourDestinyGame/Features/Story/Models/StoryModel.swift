@@ -61,7 +61,7 @@ final class StoryModel: Decodable, Hashable {
         id: 1,
         createdAt: .now,
         title: "EcoHarmony: Navigating the Green Path",
-        description: "EcoHarmony: Navigating the Green Path invites players to make impactful choices in a town dedicated to sustainability. From eco-friendly transportation to community clean-ups, each decision shapes the environmental impact, health, and community support. Will you champion renewable energy, advocate for green initiatives, or prioritize personal well-being? This short story challenges players to navigate the delicate balance between individual choices and community values, fostering a harmonious and eco-conscious town.",
+        description: "EcoHarmony: Navigating the Green Path invites players to make impactful choices in a town dedicated to sustainability. From eco-friendly transportation to community clean-ups, each decision shapes the environmental impact, health, and community support.",
         imageUrl: "https://static.wikia.nocookie.net/feign/images/1/1f/Mad.png",
         scenarios: [ScenarioModel.example],
         resources: [ResourceModel.example, ResourceModel.example2, ResourceModel.example, ResourceModel.example2]

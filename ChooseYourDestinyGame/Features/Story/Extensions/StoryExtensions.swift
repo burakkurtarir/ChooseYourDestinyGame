@@ -9,13 +9,13 @@ import Foundation
 
 extension ResourceModel {
     func toDTO() -> ResourceDTO {
-        return ResourceDTO(change: change, name: name)
+        return ResourceDTO(change: change, name: name, icon: icon)
     }
 }
 
 extension ChoiceModel {
     func toDTO() -> ChoiceDTO {
-        return ChoiceDTO(myId: id, title: title, definition: description, nextScenarioId: nextScenarioId)
+        return ChoiceDTO(myId: id, title: title, resources: resources.map{ $0.toDTO() }, definition: description, nextScenarioId: nextScenarioId)
     }
 }
 
@@ -48,7 +48,7 @@ extension GameState {
 
 extension ResourceDTO {
     func toModel() -> ResourceModel {
-        return ResourceModel(change: change, name: name)
+        return ResourceModel(change: change, name: name, icon: icon)
     }
 }
 
@@ -81,6 +81,19 @@ extension GameStateDTO {
             return .victory
         case .error(let message):
             return .error(message)
+        }
+    }
+    
+    var textValue: String {
+        switch self {
+        case .defeat:
+            return "Defeat"
+        case .inGame:
+            return "In Game"
+        case .victory:
+            return "Victory"
+        case .error(let message):
+            return "Error: \(message)"
         }
     }
 }

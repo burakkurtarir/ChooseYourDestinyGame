@@ -12,9 +12,11 @@ import SwiftData
 final class ResourceDTO {
     let change: Int
     let name: String
+    let icon: String
     
-    init(change: Int, name: String) {
+    init(change: Int, name: String, icon: String) {
         self.change = change
         self.name = name
+        self.icon = icon
     }
 }

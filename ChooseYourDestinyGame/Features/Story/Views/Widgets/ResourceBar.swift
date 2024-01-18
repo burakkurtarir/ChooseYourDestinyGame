@@ -1,10 +1,3 @@
-//
-//  ResourceBar.swift
-//  ChooseYourDestinyGame
-//
-//  Created by Burak Kurtarır on 10.01.2024.
-//
-
 import SwiftUI
 
 struct ResourceBar: View {
@@ -12,17 +5,26 @@ struct ResourceBar: View {
     let playerResources: [String: Int]
     
     var body: some View {
-        HStack {
+        HStack(spacing: 24) {
             ForEach(resources, id: \.name) { resource in
                 VStack {
-                    Image(systemName: "heart.fill")
+                    Image(systemName: resource.icon)
+                        .imageScale(.large)
                     Text("\(playerResources[resource.name] ?? 1)")
                 }
+                .foregroundStyle(.kOnSurface)
             }
         }
+        .padding(.vertical, 16)
+        .padding(.horizontal, 32)
+        .background(.kSurfaceVariant)
+        .clipShape(.rect(cornerRadius: 8))
     }
 }
 
 #Preview {
-    ResourceBar(resources: [], playerResources: ["Health": 1])
+    ResourceBar(
+        resources: [ResourceModel.example, ResourceModel.example2],
+        playerResources: ["Health": 1, "Eco-Friendliness": 2]
+    )
 }

@@ -18,6 +18,10 @@ class NavigationManager {
     func pop() {
         path.removeLast()
     }
+    
+    func popToRoot() {
+        path.removeAll()
+    }
 }
 
 extension EnvironmentValues {

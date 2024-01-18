@@ -1,10 +1,3 @@
-//
-//  StoryDatailView.swift
-//  ChooseYourDestinyGame
-//
-//  Created by Burak Kurtarır on 10.01.2024.
-//
-
 import SwiftUI
 
 struct StoryDetailView: View {
@@ -20,26 +13,29 @@ struct StoryDetailView: View {
     
     var body: some View {
         ZStack {
+            Color.kSurface.ignoresSafeArea()
+            
             switch gameManager.gameState {
-            case .error(message: let message):
-                Text(message)
-            case .victory:
-                Text("Victory")
-            case .defeat:
-                Text("Defeat")
             case .inGame:
-                VStack {
+                ScrollView {
                     ResourceBar(
                         resources: story.resources,
                         playerResources: gameManager.playerResources
                     )
+                    .padding(.bottom)
+                    
                     ScenarioCard(scenario: gameManager.currentScenario) { choice in
                         gameManager.makeChoice(choice)
                         updateStoryHistory()
                     }
+                    
+                    Spacer()
                 }
+            default:
+                GameStateView(gameState: gameManager.gameState)
             }
         }
+        .navigationBarTitleDisplayMode(.inline)
         .onAppear {
             setup()
             guard let storyHistory else { return }
@@ -72,6 +68,8 @@ struct StoryDetailView: View {
     }
 }
 
-#Preview {
-    StoryDetailView(story: StoryModel.example)
-}
+//#Preview {
+//    NavigationStack {
+//        StoryDetailView(story: StoryModel.example)
+//    }
+//}

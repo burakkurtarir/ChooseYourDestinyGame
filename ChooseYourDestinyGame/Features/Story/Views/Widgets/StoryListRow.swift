@@ -1,10 +1,3 @@
-//
-//  StoryListRow.swift
-//  ChooseYourDestinyGame
-//
-//  Created by Burak Kurtarır on 10.01.2024.
-//
-
 import SwiftUI
 
 struct StoryListRow: View {
@@ -12,14 +5,27 @@ struct StoryListRow: View {
     let onTap: () -> Void
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Text(story.title)
+                .title2TextStyle()
+                .padding(.bottom)
             Text(story.description)
-            Button("PLAY") {
+                .foregroundStyle(.kOnSurfaceVariant)
+                .padding(.bottom)
+            Button {
                 onTap()
+            } label: {
+                Text("PLAY")
+                    .foregroundStyle(.kOnPrimary)
+                    .padding(.vertical)
+                    .frame(maxWidth: .infinity, alignment: .center)
             }
             .buttonStyle(.borderedProminent)
+            .foregroundStyle(.kOnPrimary)
+            .fontWeight(.semibold)
+            .tint(.kPrimary)
         }
+        .padding(12)
     }
 }
 

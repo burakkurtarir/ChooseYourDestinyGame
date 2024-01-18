@@ -1,10 +1,3 @@
-//
-//  StoriesView.swift
-//  ChooseYourDestinyGame
-//
-//  Created by Burak Kurtarır on 10.01.2024.
-//
-
 import SwiftUI
 
 struct StoriesView: View {
@@ -13,16 +6,23 @@ struct StoriesView: View {
     
     var body: some View {
         ZStack {
+            Color.kSurface.ignoresSafeArea()
+            
             if storyManager.isStoriesLoading {
                 ProgressView()
             } else if let error = storyManager.storiesError {
                 Text(error)
             } else {
-                ForEach(storyManager.stories, id: \.id) { story in
-                    StoryListRow(story: story) {
-                        navigationManager.push(.storyDetail(story))
+                List {
+                    ForEach(storyManager.stories, id: \.id) { story in
+                        StoryListRow(story: story) {
+                            navigationManager.push(.storyDetail(story))
+                        }
+                        .background(Color.kSurfaceVariant)
                     }
+                    .simpleListItemStyle()
                 }
+                .scrollContentBackground(.hidden)
             }
         }
         .navigationTitle("Stories")
@@ -34,5 +34,7 @@ struct StoriesView: View {
 }
 
 #Preview {
-    StoriesView()
+    NavigationStack {
+        StoriesView()
+    }
 }

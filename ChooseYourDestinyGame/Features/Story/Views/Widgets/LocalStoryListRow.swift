@@ -1,10 +1,3 @@
-//
-//  LocalStoryListRow.swift
-//  ChooseYourDestinyGame
-//
-//  Created by Burak Kurtarır on 10.01.2024.
-//
-
 import SwiftUI
 
 struct LocalStoryListRow: View {
@@ -16,16 +9,31 @@ struct LocalStoryListRow: View {
     }
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Text(story.title)
-            Text(story.description)
-            Text("Current scenario id: \(storyHistory.currentScenarioId)")
-            Text("State: ")
-            Button("PLAY") {
+                .title2TextStyle()
+                .padding(.bottom, 2)
+            Text(storyHistory.updatedAt, format: .dateTime)
+                .font(.subheadline)
+                .foregroundStyle(.kOnSurfaceVariant)
+                .padding(.bottom)
+            Text("Game state: \(storyHistory.gameState.textValue)")
+                .foregroundStyle(.kOnSurfaceVariant)
+                .padding(.bottom)
+            Button {
                 onTap()
+            } label: {
+                Text("CONTINUE")
+                    .foregroundStyle(.kOnPrimary)
+                    .padding(.vertical)
+                    .frame(maxWidth: .infinity, alignment: .center)
             }
             .buttonStyle(.borderedProminent)
+            .foregroundStyle(.kOnPrimary)
+            .fontWeight(.semibold)
+            .tint(.kPrimary)
         }
+        .padding(12)
     }
 }
 

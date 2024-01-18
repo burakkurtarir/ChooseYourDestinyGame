@@ -12,10 +12,12 @@ import Observation
 final class ResourceModel: Decodable, Hashable {
     let change: Int
     let name: String
+    let icon: String
     
-    init(change: Int, name: String) {
+    init(change: Int, name: String, icon: String) {
         self.change = change
         self.name = name
+        self.icon = icon
     }
     
     static func == (lhs: ResourceModel, rhs: ResourceModel) -> Bool {
@@ -26,6 +28,6 @@ final class ResourceModel: Decodable, Hashable {
         hasher.combine(name)
     }
     
-    static let example = ResourceModel(change: 1, name: "Eco-Friendliness")
-    static let example2 = ResourceModel(change: 3, name: "Health")
+    static let example = ResourceModel(change: 1, name: "Eco-Friendliness", icon: "sun.max.circle.fill")
+    static let example2 = ResourceModel(change: -3, name: "Health", icon: "heart.circle.fill")
 }

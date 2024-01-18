@@ -16,7 +16,7 @@ ChoiceModel has array of ResourceModel
 I used Supabase as a backend. It's a backend service like Firebase but open source. It gives you PostgreSQL database. I created "Stories" table. I store all scenarios as json in the Stories table. Actually at first, I created different tables for relationships between Story, Scenario, Choice, Resource but then I realized that it's not efficient for my case because I would have to do so many sql queries for a small response. So I decided to save all scenarios as json and fetch the story at once.
 
 # UI/UX
-I made a simple design for light and dark themes.
+I made a simple design for light and dark themes. It looks so much better in dark theme please try it.
 
 # Pages
 There are 7 pages. These are Onboarding, Menu, Stories, StoryDetail, LocalStories, LocalStoryDetail, Credits

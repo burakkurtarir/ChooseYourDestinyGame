@@ -1,10 +1,3 @@
-//
-//  LocalStoriesView.swift
-//  ChooseYourDestinyGame
-//
-//  Created by Burak Kurtarır on 10.01.2024.
-//
-
 import SwiftUI
 import SwiftData
 
@@ -15,15 +8,22 @@ struct LocalStoriesView: View {
     private var storyHistories: [StoryHistoryDTO]
     
     var body: some View {
-        VStack {
-            ForEach(storyHistories) { history in
-                LocalStoryListRow(storyHistory: history) {
-                    navigationManager.push(.localStoryDetail(history))
+        ZStack {
+            Color.kSurface.ignoresSafeArea()
+            
+            List {
+                ForEach(storyHistories) { history in
+                    LocalStoryListRow(storyHistory: history) {
+                        navigationManager.push(.localStoryDetail(history))
+                    }
+                    .background(Color.kSurfaceVariant)
                 }
+                .simpleListItemStyle()
             }
+            .scrollContentBackground(.hidden)
+            .navigationTitle("Local Stories")
+            .navigationBarTitleDisplayMode(.large)
         }
-        .navigationTitle("Local Stories")
-        .navigationBarTitleDisplayMode(.large)
     }
 }
 

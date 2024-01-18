@@ -1,10 +1,3 @@
-//
-//  StoryManager.swift
-//  ChooseYourDestinyGame
-//
-//  Created by Burak Kurtarır on 10.01.2024.
-//
-
 import SwiftUI
 
 @Observable
@@ -20,14 +13,13 @@ class StoryManager {
     }
     
     func fetchStories() async {
+        isStoriesLoading = true
         do {
             stories = try await storyRemoteDataSource.fetchAllStories()
-        } catch let error as NSError {
-            print(error.description)
-            storiesError = error.localizedDescription
         } catch {
             storiesError = error.localizedDescription
         }
+        isStoriesLoading = false
     }
 }
 

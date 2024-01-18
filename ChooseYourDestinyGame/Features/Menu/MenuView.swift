@@ -1,10 +1,3 @@
-//
-//  MenuView.swift
-//  ChooseYourDestinyGame
-//
-//  Created by Burak Kurtarır on 17.01.2024.
-//
-
 import SwiftUI
 
 struct MenuView: View {
