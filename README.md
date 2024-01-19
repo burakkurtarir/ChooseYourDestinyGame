@@ -17,10 +17,15 @@ I used Supabase as a backend. It's a backend service like Firebase but open sour
 
 # UI/UX
 I made a simple design for light and dark themes. It looks so much better in dark theme please try it.<br>
-<img src="images/onboarding.png" width="100">
-<img src="images/menu.png" width="100">
-<img src="images/stories.png" width="100">
-<img src="images/story_detail.png" width="100">
+<img src="images/onboarding.png" width="150">
+<img src="images/menu.png" width="150">
+<img src="images/stories.png" width="150">
+<img src="images/story_detail.png" width="150">
+<br>
+<img src="images/dark_onboarding.png" width="150">
+<img src="images/dark_menu.png" width="150">
+<img src="images/dark_stories.png" width="150">
+<img src="images/dark_story_detail.png" width="150">
 
 # Pages
 There are 7 pages. These are Onboarding, Menu, Stories, StoryDetail, LocalStories, LocalStoryDetail, Credits<br>
